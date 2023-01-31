@@ -40,7 +40,8 @@ app.post('/chat', async(req, res) => {
           array.push(response.data.choices[0].text);
           res.render("ans",{data:array})
     }catch(error){
-        res.render("ans",{error:error})
+        console.log(error);
+        res.render("error",{error:error})
     }
 });
 
