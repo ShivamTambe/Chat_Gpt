@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response</title>
+    <link rel="stylesheet" href="/home.css">
+    <style>
+        .newtxt{
+            font-size: 20px;
+            padding: 20px 0;
+        }
+        /* .text{
+            width: 100vw;
+        } */
+        .mee{
+            display: flex;
+            margin: 30px auto;
+            gap: 50px;
+            width: 57vw;
+        }
+        .youu{
+            display: flex;
+            margin: 30px auto;
+            gap: 50px;
+            width: 57vw;
+        }
+        img{
+            width: 40px;
+        }
+        .img{
+            display: flex;
+            align-items: center;
+        }
+        .m1{
+            width:100vw;
+            background-color: #E3E0F3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/chat" method="post" class="form">
+        <div class="title">Chat Gpt</div>
+        <div class="search">
+            <input type="text" name="chat" placeholder="Enter your search">
+            <button type="submit"><img src="/imgs/search.png" alt=""></button>
+        </div>
+        <div class="text">
+            <% var i=0 %>
+            <% data.forEach(function(res) { %>
+                <% if(i%2==0) {%>
+                    <div class="m1">
+
+                        <div class="mee">
+                            <div class="img"><img src="/imgs/user.jpeg" alt=""></div>
+                            <div class="newtxt me "><%= res %></div>
+                        </div>
+                    </div>
+                <%} else {%>
+                    <div class="youu">
+                        <div class="img"><img src="/imgs/bot.jpeg" alt=""></div>
+                        <div class="newtxt you"><%= res %></div>
+                    </div>
+                <%}%>
+                <% i++ %>
+            <% }) %>
+        </div>
+    </form>
+</body>
+</html>
