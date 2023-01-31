@@ -1,0 +1,30 @@
+.newtxt{
+    font-size: 20px;
+    padding: 20px 0;
+}
+/* .text{
+    width: 100vw;
+} */
+.mee{
+    display: flex;
+    margin: 30px auto;
+    gap: 50px;
+    width: 57vw;
+}
+.youu{
+    display: flex;
+    margin: 30px auto;
+    gap: 50px;
+    width: 57vw;
+}
+img{
+    width: 40px;
+}
+.img{
+    display: flex;
+    align-items: center;
+}
+.m1{
+    width:100vw;
+    background-color: #E3E0F3;
+}
